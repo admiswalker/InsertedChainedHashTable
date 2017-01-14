@@ -2,7 +2,7 @@
 
 ## 01. 概要
  本プログラムは，key: UINT64, value: UINT64 or void* のみに対応した，
- クラスタリングの発生しない Open Addressing 方式の簡易ハッシュテーブルです．
+ クラスタリング (要素削除による速度低下) の発生しない Open Addressing 方式の簡易ハッシュテーブルです．
  特に，key: UINT64, value: UINT64，に関しては，
  Microsoft Visual Studio C++ に実装されている std::unorderd_map
  よりも高速に動作します．
