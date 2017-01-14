@@ -7,7 +7,7 @@
  Microsoft Visual Studio C++ に実装されている std::unorderd_map
  よりも高速に動作します．
 
- 詳細: https://admiswalker.blogspot.jp/2017/01/open-addressing.html
+ 詳細: https://admiswalker.blogspot.jp/2017/01/ichasht.html
 
 ## 02. 使用手順
  ./~/ICHashT/ をファイルごとコピーして  
