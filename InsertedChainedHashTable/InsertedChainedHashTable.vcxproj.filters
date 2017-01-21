@@ -33,12 +33,6 @@
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="mt32.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="mt64.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ICHashT\FileWriter.cpp">
       <Filter>ソース ファイル\ICHashT</Filter>
     </ClCompile>
@@ -62,15 +56,6 @@
     <ClInclude Include="ICHashT_ExampleFunctions.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="mt32.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="mt64.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="rounds.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ICHashT\FileWriter.hpp">
       <Filter>ヘッダー ファイル\ICHashT</Filter>
     </ClInclude>
@@ -87,6 +72,9 @@
       <Filter>ヘッダー ファイル\ICHashT</Filter>
     </ClInclude>
     <ClInclude Include="ICHashT\SysPauseForWin32.h">
+      <Filter>ヘッダー ファイル\ICHashT</Filter>
+    </ClInclude>
+    <ClInclude Include="ICHashT\FileDef.hpp">
       <Filter>ヘッダー ファイル\ICHashT</Filter>
     </ClInclude>
   </ItemGroup>

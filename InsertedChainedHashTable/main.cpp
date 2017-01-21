@@ -17,11 +17,8 @@
 // #define ReturnAssignedHash_for_debug の設定は，[./ICHashT/ICHashT.hpp] にて行う必要があります．(他のファイルへ波及させるため)
 #include "./ICHashT/ICHashT.hpp"
 
-#if defined(ICHashT_DebugMode) && !defined(ReturnAssignedHash_for_debug)
-	#include "ICHashT_ExampleFunctions.hpp"
-#endif
-
 #ifdef ICHashT_DebugMode
+	#include "ICHashT_ExampleFunctions.hpp"
 	#include "ICHashT_benchmark.hpp"
 #endif
 
@@ -34,8 +31,8 @@ int main(){
 	// Examples ( start ) ===================================================================================================
 	// ここでは，各関数の使用例を実行します．
 
-#if defined(ICHashT_DebugMode) && !defined(ReturnAssignedHash_for_debug)
-	Example1();
+#if !defined(ICHashT_DebugMode) && !defined(ReturnAssignedHash_for_debug)
+//	Example1();
 //	Example2();
 //	Example3();
 #endif
@@ -48,15 +45,16 @@ int main(){
 #if defined(ICHashT_DebugMode) && !defined(ReturnAssignedHash_for_debug)
 	// Load Factor の測定
 	/*
-	UINT64 RandSeed = 0;
-	benchmark_ICHashT_MaxLoadFactor( RandSeed );
+	benchmark_ICHashT_MaxLoadFactor( 50 );
+	printf("=============================================\n");
+	benchmark_unorderd_map_MaxLoadFactor( 50 );
 	//*/
 
-	//*
+	/*
 	// Insert
-	benchmark_ICHashT_set1();
+	benchmark_ICHashT_set1(50);
 	printf("=============================================\n");
-	benchmark_unorderd_map_insert1();
+	benchmark_unorderd_map_insert1(50);
 	//*/
 
 	/*
@@ -93,9 +91,9 @@ int main(){
 
 	/*
 	// Erase
-	benchmark_ICHashT_erase1();
+	benchmark_ICHashT_erase1(50);
 	printf("=============================================\n");
-	benchmark_unorderd_map_erase1();
+	benchmark_unorderd_map_erase1(50);
 	//*/
 
 	/*
@@ -109,6 +107,26 @@ int main(){
 	printf("=============================================\n");
 	benchmark_unorderd_map_find4();
 	//*/
+
+
+
+	/*
+	// Find, Case1 + Erase
+//	benchmark_ICHashT_find1_and_Erase(50);
+	printf("=============================================\n");
+	benchmark_unorderd_map_find1_and_Erase(50);
+	//*/
+
+
+	/*
+	// Find, Case2 + Erase
+//	benchmark_ICHashT_find4_and_Erase(50);
+	printf("=============================================\n");
+	benchmark_unorderd_map_find4_and_Erase(50);
+	//*/
+
+
+
 #endif
 
 	// benchmarks (  end  ) =================================================================================================

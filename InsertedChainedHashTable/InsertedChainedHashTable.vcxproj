@@ -118,10 +118,9 @@
     <ClCompile Include="ICHashT_DebugFunctions.cpp" />
     <ClCompile Include="ICHashT_ExampleFunctions.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mt32.cpp" />
-    <ClCompile Include="mt64.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ICHashT\FileDef.hpp" />
     <ClInclude Include="ICHashT\FileWriter.hpp" />
     <ClInclude Include="ICHashT\FNV_Hash.hpp" />
     <ClInclude Include="ICHashT\ICHashT.hpp" />
@@ -131,9 +130,6 @@
     <ClInclude Include="ICHashT_benchmark.hpp" />
     <ClInclude Include="ICHashT_DebugFunctions.hpp" />
     <ClInclude Include="ICHashT_ExampleFunctions.hpp" />
-    <ClInclude Include="mt32.h" />
-    <ClInclude Include="mt64.h" />
-    <ClInclude Include="rounds.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
