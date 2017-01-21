@@ -55,8 +55,9 @@
 
 FileWriter::FileWriter(const char* FileName){
 //	printf("Constructor is called.\n");
-	if (FOPEN_EQ(&fp,FileName, "w")) {
+	if (FOPEN_EQ(&fp,FileName, "wb")) {
 		fprintf(stderr, "%sのオープンに失敗しました.\n", FileName);
+		SysPauseForWin32();	// コンソールを一時停止する
 		exit(EXIT_FAILURE);
 	}
 }

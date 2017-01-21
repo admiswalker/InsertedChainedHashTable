@@ -54,11 +54,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "SysPauseForWin32.h"
+#include "FileDef.hpp"
 
-#ifdef _WIN32
-	#define FOPEN_EQ(fp,FileName,option) (fopen_s((fp),(FileName),(option))!=NULL)
+#ifdef _WIN32 //出力ファイルの改行コードを指定する
+	#define LineFeedCode "\r\n"
 #else
-	#define FOPEN_EQ(fp,FileName,option) ((*(fp)=fopen((FileName),(option)))==NULL)
+	#define LineFeedCode "\r\n"
+//	#define LineFeedCode "\n"
 #endif
 
 class FileWriter{
